@@ -63,3 +63,16 @@ refreshWeather("Heraklion");
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 
+let weekdays = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", ]
+let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+let now = new Date();
+let year = now.getFullYear();
+let day = weekdays[now.getDay()];
+let month = months[now.getMonth()];
+let hour = now.getHours();
+let minutes = now.getMinutes().toString().padStart(2, "0");
+
+console.log(minutes);
+
+let currentDateTime = document.querySelector("#date-time");
+currentDateTime.innerHTML = `${day} ${hour}:${minutes}`;
