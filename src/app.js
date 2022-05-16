@@ -1,4 +1,8 @@
-
+function refreshWeather(cityName) {
+    let apiKey = "7654bb3646824703bcfdf4ced8409f03";
+    let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiKey}&units=metric`;
+    axios.get(apiUrl).then(displayTemperature);
+}
 
 function displayTemperature(response) {
     console.log(response.data);
@@ -20,19 +24,16 @@ function displayTemperature(response) {
 
 function search(event) {
     event.preventDefault();
-    let searchInput = document.querySelector("#text-search-input");
-    let cityName = document.querySelector("#city");
-    cityName.innerHTML = searchInput.value;
-
+    let searchInput = document.querySelector("#search-text-input");
+    
+    refreshWeather(searchInput.value);
+   
     
     
 }
 
+refreshWeather("Paris");
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
 
-let city = "Chania";
-let apiKey = "7654bb3646824703bcfdf4ced8409f03";
-let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-axios.get(apiUrl).then(displayTemperature);
