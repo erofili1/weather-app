@@ -6,7 +6,13 @@ li.weather-stats {
 div.search {
     margin: 30px 0;
 }
+#city {
+    display: inline;
+}
 
+#description {
+    text-transform: capitalize;
+}
 #temperature {
     
     font-size: 34px;
