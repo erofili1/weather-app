@@ -32,7 +32,7 @@ function search(event) {
     
 }
 
-refreshWeather("Paris");
+refreshWeather("Heraklion");
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
