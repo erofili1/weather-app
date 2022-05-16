@@ -1,1 +1,13 @@
+li.weather-stats {
+    list-style-type: none;
+    text-align: left;
+}
 
+div.weather-app {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+footer {
+    text-align: center;
+}
