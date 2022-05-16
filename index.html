@@ -18,9 +18,9 @@
     <div class="container text-center">
       <div class="weather-app">
         <div class="search-results">
-          <h1 id="display-city-name">Chania</h1>
+          <h1 id="city">Chania</h1>
           <h2 id="date-time">Thursday 17:00</h2>
-          <h2 id="weather-description">Clear</h2>
+          <h2 id="description">Clear</h2>
         </div>
 
         <div class="search">
@@ -34,16 +34,16 @@
         </div>
 
         <div class="row">
-          <div class="col-6">
-            <div id="weather-emoji"><img src="Images/sunny.png" alt="sunny" /></div>
+          <div class="col-6" id="temperature-info">
+            <div id="weather-icon"><img src="Images/sunny.png" alt="sunny" /></div>
 
-            <div id="temperature-info"><h4> <span id="temperature-value">12</span> <a href="">°C</a> | <a href="">°F</a></h4></div>
+            <strong id="temperature">12</strong> <a href="">°C</a> | <a href="">°F</a>
           </div>
           <div class="col-6">
             <ul>
-              <li class="weather-stats">Percipitation: 0%</li>
-              <li class="weather-stats">Humidity: 52%</li>
-              <li class="weather-stats">Wind: 0%</li>
+              <li class="weather-stats" id="percipitation">Percipitation: 0%</li>
+              <li class="weather-stats" id="humidity">Humidity: 52%</li>
+              <li class="weather-stats" id="wind">Wind: 0%</li>
             </ul>
           </div>
         </div>
