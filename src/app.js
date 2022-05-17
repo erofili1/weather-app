@@ -42,6 +42,12 @@ function displayTemperature(response) {
         humidityElement.innerHTML = response.data.main.humidity;
         windElement.innerHTML = (Math.round(response.data.wind.speed));
         countryElement.innerHTML = response.data.sys.country;
+        
+
+        let iconElement = document.querySelector("#icon");
+        
+        
+        iconElement.setAttribute("src", `http://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`);
 
         
         function celsiusToFahr(event) {
@@ -55,7 +61,6 @@ function displayTemperature(response) {
         }
 
         let celsiusTemp = parseInt(response.data.main.temp);
-        console.log(celsiusTemp);
         let cToF = document.querySelector("#fahr");
         cToF.addEventListener("click", celsiusToFahr);
         let fToC = document.querySelector("#celsius");
@@ -90,8 +95,6 @@ let date = now.getDate();
 let month = now.getMonth();
 let hour = now.getHours();
 let minutes = now.getMinutes().toString().padStart(2, "0");
-
-
 
 let currentDateTime = document.querySelector("#date-time");
 currentDateTime.innerHTML = `${day} ${hour}:${minutes}`;
