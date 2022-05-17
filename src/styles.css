@@ -1,3 +1,8 @@
+div.weather-app {
+    max-width: 600px;
+    margin: 30px auto;
+}
+
 li.weather-stats {
     list-style-type: none;
     text-align: left;
@@ -16,11 +21,6 @@ div.search {
 #temperature {
     
     font-size: 34px;
-}
-
-div.weather-app {
-    max-width: 600px;
-    margin: 0 auto;
 }
 
 footer {
