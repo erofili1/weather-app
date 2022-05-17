@@ -42,7 +42,24 @@ function displayTemperature(response) {
         humidityElement.innerHTML = response.data.main.humidity;
         windElement.innerHTML = (Math.round(response.data.wind.speed));
         countryElement.innerHTML = response.data.sys.country;
-    
+
+        
+        function celsiusToFahr(event) {
+            event.preventDefault();
+            temperatureElement.innerHTML = Math.round(celsiusTemp * 9 / 5 + 32);
+        }
+        
+        function fahrToCelsius(event) {
+            event.preventDefault();
+            temperatureElement.innerHTML = Math.round(response.data.main.temp);
+        }
+
+        let celsiusTemp = parseInt(response.data.main.temp);
+        console.log(celsiusTemp);
+        let cToF = document.querySelector("#fahr");
+        cToF.addEventListener("click", celsiusToFahr);
+        let fToC = document.querySelector("#celsius");
+        fToC.addEventListener("click", fahrToCelsius);
 
 }
 
@@ -74,7 +91,7 @@ let month = now.getMonth();
 let hour = now.getHours();
 let minutes = now.getMinutes().toString().padStart(2, "0");
 
-console.log(minutes);
+
 
 let currentDateTime = document.querySelector("#date-time");
 currentDateTime.innerHTML = `${day} ${hour}:${minutes}`;
