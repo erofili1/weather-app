@@ -11,8 +11,13 @@ li.weather-stats {
 div.search {
     margin: 30px 0;
 }
+
 #city {
     display: inline;
+}
+
+#country {
+    font-size: 14px;
 }
 
 #description {
@@ -20,7 +25,16 @@ div.search {
 }
 #temperature {
     
-    font-size: 34px;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+#celsius {
+    font-size: 20px;
+}
+
+#fahr {
+    font-size: 20px;
 }
 
 footer {
