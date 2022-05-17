@@ -17,23 +17,27 @@
   <body>
     <div class="container text-center">
       <div class="weather-app">
-        <div class="search-results">
-          <h1 id="city">Chania</h1>
-          <span id="country">GR</span>
-          <h3 id="date-time">Thursday 17:00</h3>
-          <h3 id="description">Clear</h3>
+        <div class="row">
+          <div class="col">
+            <div class="search-results">
+              <h1 id="city">Chania</h1>
+              <span id="country">GR</span>
+              <h3 id="date-time">Thursday 17:00</h3>
+              <h3 id="description">Clear</h3>
+            </div>
+          </div>
+          <div class="col">
+            <div class="search">
+              <form id="search-form">
+                <input type="text" id="search-text-input" name="city" placeholder="Search city..." >
+                <button type="submit" class="btn btn-primary" id="search-button">Search</button>
+
+
+              </form>
+
+            </div>
+          </div>
         </div>
-
-        <div class="search">
-          <form id="search-form">
-            <input type="text" id="search-text-input" name="city" placeholder="Search city..." >
-            <button type="submit" class="btn btn-primary" id="search-button">Search</button>
-
-
-          </form>
-
-        </div>
-
         <div class="row">
           <div class="col-6" id="temperature-info">
             <div><img  id="icon" src="Images/sunny.png" alt="weather-icon" /></div>
