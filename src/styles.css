@@ -1,42 +1,59 @@
 div.weather-app {
-    max-width: 600px;
-    margin: 70px auto;
+  max-width: 600px;
+  margin: 70px auto;
+}
+
+a {
+  text-decoration: none;
 }
 
 li.weather-stats {
-    list-style-type: none;
-    text-align: left;
+  list-style-type: none;
+  text-align: left;
 }
 
 div.search {
-    margin: 30px 0;
+  margin: 30px 0;
 }
 
 #city {
-    display: inline;
+  display: inline;
 }
 
 #country {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 #description {
-    text-transform: capitalize;
+  text-transform: capitalize;
 }
 #temperature {
-    
-    font-size: 50px;
-    font-weight: 500;
+  font-size: 50px;
+  font-weight: 500;
 }
 
 #celsius {
-    font-size: 20px;
+  font-size: 20px;
+}
+
+#temp-seperator {
+  font-size: 20px;
 }
 
 #fahr {
-    font-size: 20px;
+  font-size: 20px;
+}
+
+.active {
+  cursor: default;
+  color: black;
+}
+
+.active:hover {
+  text-decoration: none;
+  color: black;
 }
 
 footer {
-    text-align: center;
+  text-align: center;
 }
