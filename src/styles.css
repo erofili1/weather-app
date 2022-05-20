@@ -58,6 +58,27 @@ div.search {
   margin-top: 35px;
 }
 
+.forecast-days {
+  margin-bottom: 18px;
+}
+
+.forecast-days h5 {
+  font-size: 24px;
+}
+
+.forecast-temp {
+  margin-top: 15px;
+}
+
+.forecast-temperature-min {
+  opacity: 0.5;
+  font-size: 18px;
+}
+
+.forecast-temperature-max {
+  font-weight: 700;
+  font-size: 18px;
+}
 footer {
   text-align: center;
 }
