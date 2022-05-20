@@ -54,6 +54,10 @@ div.search {
   color: black;
 }
 
+.weather-forecast {
+  margin-top: 35px;
+}
+
 footer {
   text-align: center;
 }
