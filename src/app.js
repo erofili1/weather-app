@@ -24,7 +24,9 @@ function displayError(error) {
   iconElement.innerHTML = "";
 }
 
-function displayForecast() {
+function displayForecast(response) {
+  console.log(response.data.daily);
+
   let forecastElement = document.querySelector("#forecast");
 
   let forecastHTML = `<div class="row">`;
@@ -51,8 +53,16 @@ function displayForecast() {
   forecastElement.innerHTML = forecastHTML;
 }
 
+function getForecast(coordinates) {
+  let apiKey = "7654bb3646824703bcfdf4ced8409f03";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/onecall?lat=${coordinates.lat}&lon=${coordinates.lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
+}
+
 function displayTemperature(response) {
   console.log(response.data);
+
+  getForecast(response.data.coord);
 
   let temperatureElement = document.querySelector("#temperature");
   let cityElement = document.querySelector("#city");
@@ -107,7 +117,6 @@ function search(event) {
 }
 
 refreshWeather("Heraklion");
-displayForecast();
 
 let form = document.querySelector("#search-form");
 form.addEventListener("submit", search);
